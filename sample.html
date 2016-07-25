@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .map {
+            width: 640px;
+            height: 480px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="jquery.tinyMap.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // Set up before tinyMap executes.
+            $.fn.tinyMapConfigure({
+                // Google Maps API location
+                'api': 'https://maps.googleapis.com/maps/api/js',
+                // Map Lanuguage
+                'language': 'zh-TW',
+                'key': 'AIzaSyCNZbrbJJ72blMf0LWVc0eJ0l-sOiVOLYo',
+            });
+
+            // Then executes.
+            $('.map').tinyMap({
+                'center': '台北市信義區台北101',
+                'zoom': 14
+            });
+        });
+
+    </script>
+</head>
+<body>
+<div class="map"></div>
+</body>
+</html>
